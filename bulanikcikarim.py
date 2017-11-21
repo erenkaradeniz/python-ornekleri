@@ -75,50 +75,12 @@ def kurallar(hizdegerler, mesafedegerler):
     hizli ve uzak --> Normal Fren 8
     """
     
-    if(hizdegerler[0] < mesafedegerler[0]):
-        ciktilar.append(hizdegerler[0])
-    else:
-        ciktilar.append(mesafedegerler[0])
-
-    if(hizdegerler[0] < mesafedegerler[1]):
-        ciktilar.append(hizdegerler[0])
-    else:
-        ciktilar.append(mesafedegerler[1])
-
-    if(hizdegerler[0] < mesafedegerler[2]):
-        ciktilar.append(hizdegerler[0])
-    else:
-        ciktilar.append(mesafedegerler[2])
-
-    if(hizdegerler[1] < mesafedegerler[0]):
-        ciktilar.append(hizdegerler[1])
-    else:
-        ciktilar.append(mesafedegerler[0])
-
-    if(hizdegerler[1] < mesafedegerler[1]):
-        ciktilar.append(hizdegerler[1])
-    else:
-        ciktilar.append(mesafedegerler[1])
-
-    if(hizdegerler[1] < mesafedegerler[2]):
-        ciktilar.append(hizdegerler[1])
-    else:
-        ciktilar.append(mesafedegerler[2])
-
-    if(hizdegerler[2] < mesafedegerler[0]):
-        ciktilar.append(hizdegerler[2])
-    else:
-        ciktilar.append(mesafedegerler[0])
-
-    if(hizdegerler[2] < mesafedegerler[1]):
-        ciktilar.append(hizdegerler[2])
-    else:
-        ciktilar.append(mesafedegerler[1])
-
-    if(hizdegerler[2] < mesafedegerler[2]):
-        ciktilar.append(hizdegerler[2])
-    else:
-        ciktilar.append(mesafedegerler[2])
+    for i in range(3):
+        for j in range(3):
+            if(hizdegerler[i] < mesafedegerler[j]):
+                ciktilar.append(hizdegerler[i])
+            else:
+                ciktilar.append(mesafedegerler[j])
 
     return ciktilar
 
