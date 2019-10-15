@@ -1,7 +1,11 @@
+# -*- coding: utf-8 -*-
+#!/usr/bin/Python
+
 """
-Eren Karadeniz
-201313172085
+@author : Eren Karadeniz
 """
+
+#Bulanık Mantık Örneği
 
 yavas = 50
 normal = 100
@@ -81,11 +85,22 @@ def kurallar(hizdegerler, mesafedegerler):
                 ciktilar.append(hizdegerler[i])
             else:
                 ciktilar.append(mesafedegerler[j])
-
     return ciktilar
 
 def min_max(degerler):
-	return max(degerler)
+    return max(degerler)
+
+def berraklastirma(liste):
+    toplam = 0
+    for deger in liste:
+        toplam = toplam + deger
+
+    a = liste[0]
+    b = liste[1]
+    c = liste[2]
+
+    return (a * 5 + b * 50 + c * 100) / toplam
+    
 
 def main():
     hiz = float(input('Hiz giriniz(Km) : '))
@@ -96,10 +111,13 @@ def main():
     normaldegerler = [kural[3], kural[4], kural[8]]
     gucludegerler = [kural[6], kural[7]]
 
-
-
     print("Hafif Fren : ", hafifdegerler, "\nNormal Fren : ", normaldegerler, "\nGuclu Fren : ", gucludegerler)
-    print(min_max(hafifdegerler), min_max(normaldegerler), min_max(gucludegerler))
+    berrak = []
+    berrak.append(min_max(hafifdegerler))
+    berrak.append(min_max(normaldegerler))
+    berrak.append(min_max(gucludegerler))
+    print(berrak)
+    print("Fren Orani", berraklastirma(berrak))
 
 
 main()

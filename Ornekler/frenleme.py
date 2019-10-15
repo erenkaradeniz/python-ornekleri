@@ -1,6 +1,11 @@
+# -*- coding: utf-8 -*-
+#!/usr/bin/Python
+
 """
-Bulanık Mantık Fren Sistemi
+@author : Eren Karadeniz
 """
+
+#Bulanık Mantık Örneği
 
 yavas = 50
 normal = 100
