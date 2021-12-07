@@ -18,7 +18,8 @@ def fonk():
     l = 21 # local değişkenler
 
 def main():
+    fonk()
     print("d: ", d)
-
+    #print("l: ", l) NameError: name 'l' is not defined
 
 main()
