@@ -12,7 +12,7 @@ dictionary(sözlük),
 tuple(tüp).
 
 #list = []
-kare parantez kullanılır değerler deiştirilebiliyor
+kare parantez kullanılır değerler değiştirilebiliyor
 (mutable)
 
 # dictionary = {}
